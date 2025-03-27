@@ -1,10 +1,213 @@
 openapi: 3.0.3
 info:
-  title: OpenAPI schema for template walrus-template-template
+  title: OpenAPI schema for template .
 components:
   schemas:
     variables:
       type: object
+      required:
+      - image_uuid
+      - name
+      properties:
+        name:
+          title: Name
+          type: string
+          description: The name of the instance
+          x-walrus-ui:
+            group: Basic
+            order: 2
+        description:
+          title: Description
+          type: string
+          description: The description of the instance
+          default: ""
+          x-walrus-ui:
+            group: Basic
+            order: 3
+        image_uuid:
+          title: Image Uuid
+          type: string
+          description: The UUID of the image to use
+          x-walrus-ui:
+            group: Basic
+            order: 4
+        cluster_uuid:
+          title: Cluster Uuid
+          type: string
+          description: The UUID of the cluster where the instance will be created
+          x-walrus-ui:
+            group: Basic
+            order: 5
+        hostname:
+          title: Hostname
+          type: string
+          description: The hostname of the instance
+          default: ""
+          x-walrus-ui:
+            group: Basic
+            order: 6
+        host_uuid:
+          title: Host Uuid
+          type: string
+          description: The UUID of the host where the instance will be created
+          x-walrus-ui:
+            group: Basic
+            order: 7
+        root_volume_type:
+          title: Root Volume Type
+          type: string
+          description: The type of the root volume
+          default: DefaultPrimaryStorage
+          x-walrus-ui:
+            group: Basic
+            order: 8
+        system_tags:
+          title: System Tags
+          type: array
+          description: The system tags of the instance
+          default: []
+          items:
+            type: string
+          x-walrus-ui:
+            colSpan: 12
+            group: Basic
+            order: 9
+        user_tags:
+          title: User Tags
+          type: array
+          description: The user tags of the instance
+          default: []
+          items:
+            type: string
+          x-walrus-ui:
+            colSpan: 12
+            group: Basic
+            order: 10
+        default_password:
+          title: Default Password
+          type: string
+          description: The default password for the instance
+          default: ""
+          format: password
+          writeOnly: true
+          x-walrus-ui:
+            group: Basic
+            order: 11
+        ssh_key_uuid:
+          title: Ssh Key Uuid
+          type: string
+          description: The UUID of the SSH key to use
+          x-walrus-ui:
+            group: Basic
+            order: 12
+        primary_storage_uuid_for_root_volume:
+          title: Primary Storage Uuid For Root Volume
+          type: string
+          description: The UUID of the primary storage for the root volume
+          x-walrus-ui:
+            group: Basic
+            order: 13
+        data_volumes:
+          title: Data Volumes
+          type: array
+          description: List of data volumes to attach to the instance
+          default: []
+          items:
+            properties:
+              description:
+                title: Description
+                type: string
+                x-walrus-ui:
+                  order: 3
+              disk_offering_uuid:
+                title: Disk Offering Uuid
+                type: string
+                x-walrus-ui:
+                  order: 1
+              name:
+                title: Name
+                type: string
+                x-walrus-ui:
+                  order: 2
+              primary_storage_uuid:
+                title: Primary Storage Uuid
+                type: string
+                x-walrus-ui:
+                  order: 4
+              system_tags:
+                items:
+                  type: string
+                title: System Tags
+                type: array
+                x-walrus-ui:
+                  colSpan: 12
+                  order: 5
+            required:
+            - disk_offering_uuid
+            type: object
+            x-walrus-ui:
+              colSpan: 12
+          x-walrus-ui:
+            colSpan: 12
+            group: Basic
+            order: 14
+        zone_uuid:
+          title: Zone Uuid
+          type: string
+          description: The UUID of the zone where the instance will be created
+          x-walrus-ui:
+            group: Basic
+            order: 15
+        timeout:
+          title: Timeout
+          type: number
+          description: Timeout for operations
+          default: 300
+          x-walrus-ui:
+            group: Basic
+            order: 16
+        instance_count:
+          title: Instance Count
+          type: number
+          description: Number of instances to create
+          default: 1
+          x-walrus-ui:
+            group: Basic
+            order: 17
+        l3_network_name:
+          title: L3 Network Name
+          type: string
+          description: The name of the L3 network to query (alternative to l3_network_uuids)
+          x-walrus-ui:
+            group: Basic
+            order: 18
+        l3_network_uuids:
+          title: L3 Network Uuids
+          type: array
+          description: List of L3 network UUIDs to attach to the instance
+          default: []
+          items:
+            type: string
+          x-walrus-ui:
+            colSpan: 12
+            group: Basic
+            order: 19
+        instance_offering_name:
+          title: Instance Offering Name
+          type: string
+          description: The name of the instance offering to query (alternative to
+            instance_offering_uuid)
+          x-walrus-ui:
+            group: Basic
+            order: 20
+        instance_offering_uuid:
+          title: Instance Offering Uuid
+          type: string
+          description: UUID of the instance offering
+          default: ""
+          x-walrus-ui:
+            group: Basic
+            order: 21
       x-walrus-ui:
         groupOrder:
         - Basic
