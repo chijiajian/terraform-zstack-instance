@@ -20,9 +20,9 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [zstack_instance.instance](https://registry.terraform.io/providers/zstack-robot/zstack/1.0.5/docs/resources/instance) | resource |
-| [zstack_instance_offers.offers](https://registry.terraform.io/providers/zstack-robot/zstack/1.0.5/docs/data-sources/instance_offers) | data source |
-| [zstack_l3networks.l3networks](https://registry.terraform.io/providers/zstack-robot/zstack/1.0.5/docs/data-sources/l3networks) | data source |
+| [zstack_instance.instance](https://registry.terraform.io/providers/ZStack-Robot/zstack/1.0.5/docs/resources/instance) | resource |
+| [zstack_instance_offers.offers](https://registry.terraform.io/providers/ZStack-Robot/zstack/1.0.5/docs/data-sources/instance_offers) | data source |
+| [zstack_l3networks.l3networks](https://registry.terraform.io/providers/ZStack-Robot/zstack/1.0.5/docs/data-sources/l3networks) | data source |
 
 ## Inputs
 
@@ -42,6 +42,7 @@ No modules.
 | <a name="input_l3_network_name"></a> [l3\_network\_name](#input\_l3\_network\_name) | The name of the L3 network to query (alternative to l3\_network\_uuids) | `string` | `null` | no |
 | <a name="input_l3_network_uuids"></a> [l3\_network\_uuids](#input\_l3\_network\_uuids) | List of L3 network UUIDs to attach to the instance | `list(string)` | `[]` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the instance | `string` | n/a | yes |
+| <a name="input_never_stop"></a> [never\_stop](#input\_never\_stop) | vm ha | `bool` | `true` | no |
 | <a name="input_primary_storage_uuid_for_root_volume"></a> [primary\_storage\_uuid\_for\_root\_volume](#input\_primary\_storage\_uuid\_for\_root\_volume) | The UUID of the primary storage for the root volume | `string` | `null` | no |
 | <a name="input_root_volume_type"></a> [root\_volume\_type](#input\_root\_volume\_type) | The type of the root volume | `string` | `"DefaultPrimaryStorage"` | no |
 | <a name="input_ssh_key_uuid"></a> [ssh\_key\_uuid](#input\_ssh\_key\_uuid) | The UUID of the SSH key to use | `string` | `null` | no |

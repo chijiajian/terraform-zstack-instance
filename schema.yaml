@@ -208,6 +208,14 @@ components:
           x-walrus-ui:
             group: Basic
             order: 21
+        never_stop:
+          title: Never Stop
+          type: boolean
+          description: vm ha
+          default: true
+          x-walrus-ui:
+            group: Basic
+            order: 22
       x-walrus-ui:
         groupOrder:
         - Basic
