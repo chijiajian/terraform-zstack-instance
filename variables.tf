@@ -157,5 +157,10 @@ variable "instance_offering_uuid" {
   default     = ""  
 }
 
+variable "never_stop" {
+  description = "vm ha"
+  type        = bool
+  default     = true  
+}
 
 

@@ -1,11 +1,3 @@
-terraform {
-  required_providers {
-    zstack = {
-      source  = "zstack-robot/zstack"
-      version = "1.0.5"
-    }
-  }
-}
 
 locals {
   context = var.context
@@ -44,4 +36,5 @@ resource "zstack_instance" "instance" {
   image_uuid             = var.image_uuid
   instance_offering_uuid = local.instance_offering_uuid != "" ? local.instance_offering_uuid : null
   l3_network_uuids           = local.l3_network_uuids
+  never_stop             = var.never_stop
 }
