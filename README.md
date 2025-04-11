@@ -4,13 +4,13 @@
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
-| <a name="requirement_zstack"></a> [zstack](#requirement\_zstack) | 1.0.5 |
+| <a name="requirement_zstack"></a> [zstack](#requirement\_zstack) | 1.0.7 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_zstack"></a> [zstack](#provider\_zstack) | 1.0.5 |
+| <a name="provider_zstack"></a> [zstack](#provider\_zstack) | 1.0.7 |
 
 ## Modules
 
@@ -20,9 +20,9 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [zstack_instance.instance](https://registry.terraform.io/providers/ZStack-Robot/zstack/1.0.5/docs/resources/instance) | resource |
-| [zstack_instance_offers.offers](https://registry.terraform.io/providers/ZStack-Robot/zstack/1.0.5/docs/data-sources/instance_offers) | data source |
-| [zstack_l3networks.l3networks](https://registry.terraform.io/providers/ZStack-Robot/zstack/1.0.5/docs/data-sources/l3networks) | data source |
+| [zstack_instance.instance](https://registry.terraform.io/providers/ZStack-Robot/zstack/1.0.7/docs/resources/instance) | resource |
+| [zstack_instance_offers.offers](https://registry.terraform.io/providers/ZStack-Robot/zstack/1.0.7/docs/data-sources/instance_offers) | data source |
+| [zstack_l3networks.l3networks](https://registry.terraform.io/providers/ZStack-Robot/zstack/1.0.7/docs/data-sources/l3networks) | data source |
 
 ## Inputs
 
@@ -33,6 +33,7 @@ No modules.
 | <a name="input_data_volumes"></a> [data\_volumes](#input\_data\_volumes) | List of data volumes to attach to the instance | <pre>list(object({<br/>    disk_offering_uuid = string<br/>    name              = optional(string)<br/>    description       = optional(string)<br/>    primary_storage_uuid = optional(string)<br/>    system_tags       = optional(list(string))<br/>  }))</pre> | `[]` | no |
 | <a name="input_default_password"></a> [default\_password](#input\_default\_password) | The default password for the instance | `string` | `""` | no |
 | <a name="input_description"></a> [description](#input\_description) | The description of the instance | `string` | `""` | no |
+| <a name="input_expunge"></a> [expunge](#input\_expunge) | n/a | `bool` | `true` | no |
 | <a name="input_host_uuid"></a> [host\_uuid](#input\_host\_uuid) | The UUID of the host where the instance will be created | `string` | `null` | no |
 | <a name="input_hostname"></a> [hostname](#input\_hostname) | The hostname of the instance | `string` | `""` | no |
 | <a name="input_image_uuid"></a> [image\_uuid](#input\_image\_uuid) | The UUID of the image to use | `string` | n/a | yes |

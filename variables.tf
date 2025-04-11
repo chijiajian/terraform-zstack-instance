@@ -163,4 +163,8 @@ variable "never_stop" {
   default     = true  
 }
 
+variable "expunge" {
+  type  = bool
+  default = true
+}
 

@@ -216,6 +216,13 @@ components:
           x-walrus-ui:
             group: Basic
             order: 22
+        expunge:
+          title: Expunge
+          type: boolean
+          default: true
+          x-walrus-ui:
+            group: Basic
+            order: 23
       x-walrus-ui:
         groupOrder:
         - Basic
