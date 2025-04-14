@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "zstack" {
-  host             = "1.30.3.3"   # ZStack 管理节点的 IP
+  host             = "1.x.x.x"   # ZStack 管理节点的 IP
   account_name     = "admin"         # 账户名称
   account_password = "xxxx"      # 账户密码
 }
@@ -16,7 +16,7 @@ provider "zstack" {
 
 # 获取镜像
 module "zstack_image" {
-  source = "git::http://dev.zstack.io:9080/jiajian.chi/terraform-zstack-image.git"
+  source = "git::http://dev.zstack.io:9080/jiajian.chi/terraform-zstack-image.git"   # image module git repo
 
   providers = {
     zstack = zstack
